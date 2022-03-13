@@ -19,7 +19,7 @@
     "jimp": "^0.16.1",
     "sqlite3": "5.0.2",
     "strapi-plugin-comment-manager": "^1.0.10",
-    "strapi-plugin-masterclass": "^2.0.2",
+    "strapi-plugin-masterclass": "^2.0.3",
     "strapi-plugin-ratings": "^1.0.6"
   },
   "author": {
