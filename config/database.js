@@ -5,29 +5,23 @@ module.exports = ({ env }) => {
   if(env('NODE_ENV') === 'production'){
     const config = parse(env("DATABASE_URL"));
     console.log("starting postgres")
-    console.log({config})
+    console.log(JSON.stringify({config}))
 
     return {
-      defaultConnection: 'default',
-      connections: {
-        default: {
-          connector: 'bookshelf',
-          settings: {
-            client: 'postgres',
-            host: config.host,
-            port: config.port,
-            database: config.database,
-            username: config.user,
-            password: config.password,
-            ssl: {
-              rejectUnauthorized: false,
-            },
-          },
-          options: {
-            ssl: true,
+      connection: {
+        client: 'postgres',
+        connection: {
+          host: config.host,
+          port: config.port,
+          database: config.database,
+          user: config.user,
+          password: config.password,
+          ssl: {
+            rejectUnauthorized: false
           },
         },
-      },
+        debug: false,
+      }
     }
   }
   return {
