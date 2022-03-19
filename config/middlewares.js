@@ -1,9 +1,4 @@
-const bucket = process.env["AWS_BUCKET"]
-const region = process.env["AWS_REGION"]
-
-const url = `${bucket}.s3.${region}.amazonaws.com`
-
-module.exports = [
+module.exports = ({env}) => [
   'strapi::errors',
   {
     name: 'strapi::security',
@@ -12,8 +7,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', url],
-          'media-src': ["'self'", 'data:', 'blob:', url],
+          'img-src': ["'self'", 'data:', 'blob:', `${env('AWS_BUCKET')}.s3.amazonaws.com`],
+          'media-src': ["'self'", 'data:', 'blob:', `${env('AWS_BUCKET')}.s3.amazonaws.com`],
           upgradeInsecureRequests: null,
         },
       },
