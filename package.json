@@ -20,7 +20,7 @@
     "sqlite3": "5.0.2",
     "strapi-plugin-comment-manager": "^1.0.10",
     "strapi-plugin-masterclass": "^2.1.4",
-    "strapi-plugin-ratings": "^1.0.8"
+    "strapi-plugin-ratings": "^1.1.1"
   },
   "author": {
     "name": "A Strapi developer"

@@ -1,6 +1,7 @@
 module.exports = ({env}) => {
   let upload
   let masterclass
+  let ratings
   if (env('NODE_ENV') === 'production') {
     upload = {
       config: {
@@ -20,9 +21,14 @@ module.exports = ({env}) => {
       enabled: true,
       resolve: './src/plugins/masterclass'
     }
+    ratings = {
+      enabled: true,
+      resolve: './src/plugins/ratings'
+    }
   }
   return {
     masterclass,
+    ratings,
     upload
   }
 }
