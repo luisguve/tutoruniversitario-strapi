@@ -19,7 +19,7 @@
     "pg-connection-string": "^2.5.0",
     "sqlite3": "5.0.2",
     "strapi-plugin-comment-manager": "^1.0.10",
-    "strapi-plugin-masterclass": "^2.2.1",
+    "strapi-plugin-masterclass": "^2.2.2",
     "strapi-plugin-ratings": "^1.1.1"
   },
   "author": {
