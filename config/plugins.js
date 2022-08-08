@@ -1,7 +1,9 @@
 module.exports = ({env}) => {
   let upload
   let masterclass
+  let commentManager
   let ratings
+  let payments
   if (env('NODE_ENV') === 'production') {
     upload = {
       config: {
@@ -23,12 +25,22 @@ module.exports = ({env}) => {
     }
     ratings = {
       enabled: true,
-      resolve: './src/plugins/ratings'
+      resolve: './src/plugins/strapi-plugin-ratings'
+    }
+    commentManager = {
+      enabled: true,
+      resolve: './src/plugins/comment-manager'
+    }
+    payments = {
+      enabled: true,
+      resolve: './src/plugins/strapi-plugin-payments'
     }
   }
   return {
     masterclass,
     ratings,
-    upload
+    "comment-manager": commentManager,
+    upload,
+    payments
   }
 }
