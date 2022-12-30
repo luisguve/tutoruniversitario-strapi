@@ -7,8 +7,8 @@ module.exports = ({env}) => [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', `${env('AWS_BUCKET')}.s3.amazonaws.com`, "dl.airtable.com"],
-          'media-src': ["'self'", 'data:', 'blob:', `${env('AWS_BUCKET')}.s3.amazonaws.com`, "dl.airtable.com"],
+          'img-src': ["'self'", 'data:', 'blob:', `res.cloudinary.com`, "dl.airtable.com"],
+          'media-src': ["'self'", 'data:', 'blob:', `res.cloudinary.com`, "dl.airtable.com"],
           upgradeInsecureRequests: null,
         },
       },
