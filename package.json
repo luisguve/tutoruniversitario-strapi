@@ -20,10 +20,10 @@
     "pg": "^8.7.3",
     "pg-connection-string": "^2.5.0",
     "qs": "^6.10.1",
-    "strapi-plugin-comment-manager": "^1.0.16",
-    "strapi-plugin-masterclass": "^4.0.0",
-    "strapi-plugin-payments": "0.0.3",
-    "strapi-plugin-ratings": "^1.1.6"
+    "strapi-plugin-comment-manager": "^1.0.17",
+    "strapi-plugin-masterclass": "^4.1.1",
+    "strapi-plugin-payments": "^1.0.1",
+    "strapi-plugin-ratings": "^1.1.9"
   },
   "author": {
     "name": "A Strapi developer"
